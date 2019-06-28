@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ViewFlipper
+            android:id="@+id/vf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom_tab">
+
+            <include android:id="@+id/include1" layout="@layout/item_calories" />
+            <include android:id="@+id/include2" layout="@layout/item_nutrients" />
+
+        </ViewFlipper>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_tab"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:background="@drawable/tab_shadow_bg">
+
+            <LinearLayout
+                android:id="@+id/ll_nutrition"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/tab_nutrition_icon"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nutrition"
+                    android:textColor="@color/main_color"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/rubik"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_fitness"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/tab_fitness_icon"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fitness"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/rubik"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_goals"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/tab_goals_icon"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Goals"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/rubik"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_social"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/tab_sosial_icon"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Social"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/rubik"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_profile"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/tab_profile_icon"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/rubik"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

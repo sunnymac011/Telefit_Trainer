@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "323428350483",
+    "firebase_url": "https://telfittest.firebaseio.com",
+    "project_id": "telfittest",
+    "storage_bucket": "telfittest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323428350483:android:13d70f9ddb40214a",
+        "android_client_info": {
+          "package_name": "fit.tele.com.telefit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323428350483-tmu5943e3lfnavsvms7n2m8q9k0o0225.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fit.tele.com.telefit",
+            "certificate_hash": "f30bc95382f917ece74b8e3952d1dd453cbc6416"
+          }
+        },
+        {
+          "client_id": "323428350483-c2kn1f0e7i4nl5l3jtsesp2a5oq8f5vk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb1AymlxUVykGUmJlCETjQSWCzeGOr1Zc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323428350483-c2kn1f0e7i4nl5l3jtsesp2a5oq8f5vk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

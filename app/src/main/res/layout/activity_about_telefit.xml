@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_main_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color">
+
+            <RelativeLayout
+                android:id="@+id/rl_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/img_side_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vect_back"
+                    android:layout_marginLeft="@dimen/_20sdp"/>
+
+                <TextView
+                    android:id="@+id/txt_header_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About Telefit"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/rubik"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/rl_header"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp">
+
+                <ImageView
+                    android:id="@+id/img_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo_white_t"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Telefit"
+                    android:textSize="@dimen/_32sdp"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/img_logo"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/rubik"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visualize  .  Execute  .  Transform"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/txt_title"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/rubik"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_list"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_main_header">
+
+            <RelativeLayout
+                android:id="@+id/rl_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_15sdp">
+
+                <TextView
+                    android:id="@+id/txt_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="App Version"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/rubik"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/txt_version_count"
+                    android:layout_marginRight="@dimen/_10sdp"/>
+
+                <TextView
+                    android:id="@+id/txt_version_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_blue_text"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/rubik"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_right_icon"
+                    android:layout_marginRight="@dimen/_10sdp"/>
+
+                <ImageView
+                    android:id="@+id/img_right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/right_arrow_dark"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_15sdp">
+
+                <TextView
+                    android:id="@+id/txt_privacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy Policy"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/rubik"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_privacy_right_icon"
+                    android:layout_marginRight="@dimen/_10sdp"/>
+
+                <ImageView
+                    android:id="@+id/img_privacy_right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/right_arrow_dark"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_15sdp">
+
+                <TextView
+                    android:id="@+id/txt_terms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Terms of service"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/rubik"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_terms_right_icon"
+                    android:layout_marginRight="@dimen/_10sdp"/>
+
+                <ImageView
+                    android:id="@+id/img_terms_right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/right_arrow_dark"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copyright 2019
+Barrier Breaker LLC.
+All rights reserved."
+            android:textColor="@color/light_gray"
+            android:fontFamily="@font/rubik"
+            android:layout_below="@+id/ll_list"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+</layout>

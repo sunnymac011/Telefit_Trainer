@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color">
+
+            <RelativeLayout
+                android:id="@+id/rl_user_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp">
+
+                <ImageView
+                    android:id="@+id/img_user"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:src="@drawable/user_placeholder"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_user"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/txt_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Jane Doe"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_16sdp"
+                        android:fontFamily="@font/rubik"/>
+
+                    <TextView
+                        android:id="@+id/txt_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="40 years old"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp"
+                        android:fontFamily="@font/rubik"/>
+
+                    <TextView
+                        android:id="@+id/txt_height_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="5' 1 in   /  125 Pound"
+                        android:textColor="@color/light_blue_text"
+                        android:fontFamily="@font/rubik"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit >"
+                    android:textColor="@color/light_blue_text"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/rubik"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_exercise_detail"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_user_details"
+                android:padding="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/gradiant_blue_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Program enrolled"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik"/>
+
+                <TextView
+                    android:id="@+id/txt_exercise_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="2 Months Weight Loss"
+                    android:textSize="@dimen/_16sdp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik"/>
+
+                <TextView
+                    android:id="@+id/txt_lbs_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="12 lbs since Jan 2019"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_exercise_detail"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_40sdp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/ll_nutrition_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txt_nutrition_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nutrition"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/rubik"/>
+
+                    <View
+                        android:id="@+id/view_nutrition"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:background="@color/white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/ll_fitness_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/txt_fitness_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fitness"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/light_gray"
+                        android:fontFamily="@font/rubik"/>
+
+                    <View
+                        android:id="@+id/view_fitness"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:background="@color/white"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/ll_more_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/txt_more_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="More"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/light_gray"
+                        android:fontFamily="@font/rubik"/>
+
+                    <View
+                        android:id="@+id/view_more"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:background="@color/white"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ViewFlipper
+            android:id="@+id/vf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_header"
+            android:layout_above="@+id/ll_bottom_tab">
+
+            <include android:id="@+id/include1" layout="@layout/item_profile_nutrition" />
+            <include android:id="@+id/include2" layout="@layout/item_profile_fitness" />
+            <include android:id="@+id/include2" layout="@layout/item_profile_more" />
+
+        </ViewFlipper>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_tab"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:background="@drawable/tab_shadow_bg">
+
+            <LinearLayout
+                android:id="@+id/ll_nutrition"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/tab_nutrition_non_icon"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nutrition"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/rubik"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_fitness"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/tab_fitness_icon"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fitness"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/rubik"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_goals"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/tab_goals_icon"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Goals"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/rubik"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_social"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/tab_sosial_icon"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Social"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/rubik"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_profile"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/tab_profile_selected_icon"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textColor="@color/main_color"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/rubik"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

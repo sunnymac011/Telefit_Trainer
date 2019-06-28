@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="days">
+        <item>Day 1, Monday</item>
+        <item>Day 2, Tuesday</item>
+        <item>Day 3, Wednesday</item>
+        <item>Day 4, Thursday</item>
+        <item>Day 5, Friday</item>
+        <item>Day 6, Saturday</item>
+        <item>Day 7, Sunday</item>
+    </string-array>
+
+    <string-array name="routine_type">
+        <item>General Health</item>
+        <item>Cutting</item>
+        <item>Bulking</item>
+        <item>Sport Specific</item>
+    </string-array>
+
+    <string-array name="difficulty_level">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+    </string-array>
+
+</resources>

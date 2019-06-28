@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/register_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/register_bg_layer"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome"
+                android:textSize="@dimen/_24sdp"
+                android:textStyle="bold"
+                android:textColor="@color/light_blue"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:fontFamily="@font/rubik"/>
+
+            <TextView
+                android:id="@+id/txt_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stay on track of your diet
+and exercises."
+                android:textColor="#fff"
+                android:layout_below="@+id/txt_title"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:fontFamily="@font/rubik"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_google"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/rectangle_bg"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_below="@+id/txt_desc">
+
+                <ImageView
+                    android:id="@+id/img_google"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/rectangle_social_bg"
+                    android:src="@drawable/google_g_logo"
+                    android:scaleType="center"/>
+
+                <TextView
+                    android:id="@+id/txt_google"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continue with Google"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="#fff"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_toRightOf="@+id/img_google"
+                    android:fontFamily="@font/rubik"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_fb"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/rectangle_bg"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_below="@+id/rl_google">
+
+                <ImageView
+                    android:id="@+id/img_fb"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/rectangle_social_bg"
+                    android:src="@drawable/f_icon"
+                    android:scaleType="center"/>
+
+                <TextView
+                    android:id="@+id/txt_fb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continue with Facebook"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="#fff"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_toRightOf="@+id/img_fb"
+                    android:fontFamily="@font/rubik"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_below="@+id/rl_fb"
+                android:background="@drawable/rectangle_social_bg"
+                android:text="Login with Email ID"
+                android:textAllCaps="false"
+                android:textColor="@color/main_color"
+                android:fontFamily="@font/rubik"/>
+
+            <TextView
+                android:id="@+id/txt_or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="or"
+                android:textColor="@color/light_blue"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btn_login"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:fontFamily="@font/rubik"/>
+
+            <Button
+                android:id="@+id/btn_create"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_below="@+id/txt_or"
+                android:background="@drawable/rectangle_social_bg"
+                android:text="Create new account"
+                android:textAllCaps="false"
+                android:textColor="@color/main_color"
+                android:fontFamily="@font/rubik"/>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

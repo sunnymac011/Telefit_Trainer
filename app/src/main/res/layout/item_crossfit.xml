@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_90sdp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/rectangle_main_blue_bg"
+    android:backgroundTint="@color/white"
+    android:layout_marginBottom="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        tools:text="The Girls"
+        android:textStyle="bold"
+        android:textColor="@color/light_blue_text"
+        android:textSize="@dimen/_20sdp"
+        android:paddingLeft="@dimen/_20sdp"/>
+
+</RelativeLayout>

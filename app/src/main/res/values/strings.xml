@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">TeleFit</string>
+    <string name="facebook_app_id">1981780252117081</string>
+    <string name="fb_login_protocol_scheme">fb1981780252117081</string>
+    <!-- Share Pref -->
+    <string name="share_key">key_share</string>
+    <!-- Toast message -->
+    <string name="toast_login_fail">Login failed</string>
+    <string name="snack_bar_no_internet">Please check internet connection</string>
+    <string name="image_permission_txt">Without storage permission we are unable to get Image file.</string>
+    <string name="agora_app_id">0715b6e7c8e0407fa6feb311e0aff1d3</string>
+
+    <string name="toast_image_empty">Image is empty, please try again</string>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+    <string name="num_left">*</string>
+    <string name="num_right">#</string>
+
+    <string-array name="spinnerItemsGender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>

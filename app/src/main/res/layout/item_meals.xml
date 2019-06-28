@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rl_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_meals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_stroke_light_blue"
+            android:backgroundTint="@color/light_blue"
+            android:layout_margin="@dimen/_20sdp"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <EditText
+                android:id="@+id/edt_meals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search here"
+                android:textColor="@color/main_color"
+                android:fontFamily="@font/rubik"
+                android:layout_toLeftOf="@+id/img_search"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_view"
+                android:backgroundTint="@color/main_color"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/img_meals_barcode"
+                android:layout_marginRight="@dimen/_15sdp"/>
+
+            <ImageView
+                android:id="@+id/img_meals_barcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/barcode"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+            android:layout_below="@+id/rl_meals"
+            android:layout_marginLeft="@dimen/_80sdp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_food"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_meals"
+            android:layout_marginTop="@dimen/_3sdp"
+            tools:listitem="@layout/item_rv_general"/>
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/rl_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_blue"
+            android:text="Oops,
+No Meals entered on
+previous days available."
+            android:textStyle="bold"
+            android:textSize="@dimen/_18sdp"
+            android:fontFamily="@font/rubik"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_50sdp"/>
+
+        <TextView
+            android:id="@+id/txt_add_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New >"
+            android:textStyle="bold"
+            android:textColor="@color/light_blue_text"
+            android:layout_below="@+id/txt_no_data"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_20sdp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
