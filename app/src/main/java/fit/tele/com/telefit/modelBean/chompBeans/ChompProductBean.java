@@ -1,10 +1,13 @@
 
 package fit.tele.com.telefit.modelBean.chompBeans;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ChompProductBean {
+public class ChompProductBean implements Parcelable {
 
     @SerializedName("product_id")
     @Expose
@@ -24,6 +27,27 @@ public class ChompProductBean {
     @SerializedName("api_endpoint")
     @Expose
     private String apiEndpoint;
+
+    protected ChompProductBean(Parcel in) {
+        productId = in.readString();
+        name = in.readString();
+        manufacturer = in.readString();
+        upc = in.readString();
+        details = in.readParcelable(Details.class.getClassLoader());
+        apiEndpoint = in.readString();
+    }
+
+    public static final Creator<ChompProductBean> CREATOR = new Creator<ChompProductBean>() {
+        @Override
+        public ChompProductBean createFromParcel(Parcel in) {
+            return new ChompProductBean(in);
+        }
+
+        @Override
+        public ChompProductBean[] newArray(int size) {
+            return new ChompProductBean[size];
+        }
+    };
 
     public String getProductId() {
         return productId;
@@ -73,4 +97,30 @@ public class ChompProductBean {
         this.apiEndpoint = apiEndpoint;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(productId);
+        dest.writeString(name);
+        dest.writeString(manufacturer);
+        dest.writeString(upc);
+        dest.writeParcelable(details, flags);
+        dest.writeString(apiEndpoint);
+    }
+
+    @Override
+    public String toString() {
+        return "ChompProductBean{" +
+                "productId='" + productId + '\'' +
+                ", name='" + name + '\'' +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", upc='" + upc + '\'' +
+                ", details=" + details +
+                ", apiEndpoint='" + apiEndpoint + '\'' +
+                '}';
+    }
 }

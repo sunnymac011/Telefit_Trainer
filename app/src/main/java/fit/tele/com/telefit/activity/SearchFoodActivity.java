@@ -44,6 +44,7 @@ public class SearchFoodActivity extends BaseActivity implements View.OnClickList
     private LinearLayoutManager linearLayoutManager;
     private EditText foodSv;
     private ArrayList<ChompProductBean> chompProductBeans;
+    private int strSelectedTab = 1;
 
     @Override
     public int getLayoutResId() {
@@ -74,6 +75,7 @@ public class SearchFoodActivity extends BaseActivity implements View.OnClickList
         binding.llFoodTab.setOnClickListener(this);
         binding.llMealsTab.setOnClickListener(this);
         binding.llRecipesTab.setOnClickListener(this);
+        binding.txtNew.setOnClickListener(this);
 
         FoodRv = (RecyclerView) findViewById(R.id.rv_food);
         foodSv = (EditText) findViewById(R.id.edt_search_food);
@@ -111,6 +113,7 @@ public class SearchFoodActivity extends BaseActivity implements View.OnClickList
                 break;
 
             case R.id.ll_search_tab:
+                strSelectedTab = 1;
                 binding.vf.setDisplayedChild(0);
                 binding.txtSearchTab.setTextColor(getResources().getColor(R.color.white));
                 binding.viewSearch.setVisibility(View.VISIBLE);
@@ -123,6 +126,7 @@ public class SearchFoodActivity extends BaseActivity implements View.OnClickList
                 setSearchFoodData();
                 break;
             case R.id.ll_food_tab:
+                strSelectedTab = 2;
                 binding.vf.setDisplayedChild(1);
                 binding.txtSearchTab.setTextColor(getResources().getColor(R.color.light_gray));
                 binding.viewSearch.setVisibility(View.GONE);
@@ -134,6 +138,7 @@ public class SearchFoodActivity extends BaseActivity implements View.OnClickList
                 binding.viewRecipes.setVisibility(View.GONE);
                 break;
             case R.id.ll_meals_tab:
+                strSelectedTab = 3;
                 binding.vf.setDisplayedChild(2);
                 binding.txtSearchTab.setTextColor(getResources().getColor(R.color.light_gray));
                 binding.viewSearch.setVisibility(View.GONE);
@@ -145,6 +150,7 @@ public class SearchFoodActivity extends BaseActivity implements View.OnClickList
                 binding.viewRecipes.setVisibility(View.GONE);
                 break;
             case R.id.ll_recipes_tab:
+                strSelectedTab = 4;
                 binding.vf.setDisplayedChild(3);
                 binding.txtSearchTab.setTextColor(getResources().getColor(R.color.light_gray));
                 binding.viewSearch.setVisibility(View.GONE);
@@ -154,6 +160,18 @@ public class SearchFoodActivity extends BaseActivity implements View.OnClickList
                 binding.viewMeals.setVisibility(View.GONE);
                 binding.txtRecipesTab.setTextColor(getResources().getColor(R.color.white));
                 binding.viewRecipes.setVisibility(View.VISIBLE);
+                break;
+
+            case R.id.txt_new:
+                if (strSelectedTab == 3) {
+                    intent = new Intent(context, NewRecipeActivity.class);
+                }
+                else {
+                    intent = new Intent(context, NewRecipeActivity.class);
+                }
+                startActivity(intent);
+                this.overridePendingTransition(0, 0);
+
                 break;
         }
     }
