@@ -42,8 +42,7 @@
                     android:id="@+id/txt_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Stay on track of your diet
-and exercises."
+                    android:text="Stay on track of your diet and exercises."
                     android:textColor="#fff"
                     android:layout_below="@+id/txt_title"
                     android:layout_marginLeft="@dimen/_30sdp"
@@ -56,12 +55,12 @@ and exercises."
                 android:id="@+id/txt_inst"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Stay on track of your diet
-and exercises."
+                android:text="Create your profile and take control of your health."
                 android:textColor="@color/main_color"
                 android:layout_below="@+id/rl_header"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
                 android:fontFamily="@font/rubik"/>
 
             <LinearLayout

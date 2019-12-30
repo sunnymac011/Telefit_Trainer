@@ -64,7 +64,8 @@
                 android:id="@+id/rl_trainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_20sdp">
+                android:padding="@dimen/_20sdp"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/txt_trainer"

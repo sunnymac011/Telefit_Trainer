@@ -1,52 +1,45 @@
 {
   "project_info": {
-    "project_number": "323428350483",
-    "firebase_url": "https://telfittest.firebaseio.com",
-    "project_id": "telfittest",
-    "storage_bucket": "telfittest.appspot.com"
+    "project_number": "745728645488",
+    "firebase_url": "https://telefittrainer.firebaseio.com",
+    "project_id": "telefittrainer",
+    "storage_bucket": "telefittrainer.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:323428350483:android:13d70f9ddb40214a",
+        "mobilesdk_app_id": "1:745728645488:android:33eb26b3d2121002",
         "android_client_info": {
-          "package_name": "fit.tele.com.telefit"
+          "package_name": "fit.tele.com.trainer"
         }
       },
       "oauth_client": [
         {
-          "client_id": "323428350483-tmu5943e3lfnavsvms7n2m8q9k0o0225.apps.googleusercontent.com",
+          "client_id": "745728645488-pfgcbrpoce7pd5fbfjo92rdohbvdemv7.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "fit.tele.com.telefit",
-            "certificate_hash": "f30bc95382f917ece74b8e3952d1dd453cbc6416"
+            "package_name": "fit.tele.com.trainer",
+            "certificate_hash": "c5818848d0e2877b4165d0ad9198f9b30d9cd2bb"
           }
         },
         {
-          "client_id": "323428350483-c2kn1f0e7i4nl5l3jtsesp2a5oq8f5vk.apps.googleusercontent.com",
+          "client_id": "745728645488-0r5conpc0u7jh237jgtdejk6u75f5hkv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDb1AymlxUVykGUmJlCETjQSWCzeGOr1Zc"
+          "current_key": "AIzaSyAlu265ikawEQGEAhySSh_za4Ie5FYqm4Y"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "323428350483-c2kn1f0e7i4nl5l3jtsesp2a5oq8f5vk.apps.googleusercontent.com",
+              "client_id": "745728645488-0r5conpc0u7jh237jgtdejk6u75f5hkv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }

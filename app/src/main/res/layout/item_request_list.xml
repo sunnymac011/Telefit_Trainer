@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    swipe:cardElevation="0dp"
+    android:background="?android:selectableItemBackground">
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        swipe:leftEdgeSwipeOffset="0dp"
+        swipe:rightEdgeSwipeOffset="0dp">
+
+        <!--Bottom View For Right to Left-->
+        <LinearLayout
+            android:id="@+id/bottom_wrapper"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+        </LinearLayout>
+
+        <!-- Another Bottom View For Left to Right -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/bottom_wrapper1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:id="@+id/rl_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/checked"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Accept"
+                        android:textColor="@color/light_gray"
+                        android:fontFamily="@font/rubik"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/light_gray"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_deny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/deny"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deny"
+                        android:textColor="@color/light_gray"
+                        android:fontFamily="@font/rubik"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/light_gray"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- Top View,  Row itemView of RecyclerView -->
+        <RelativeLayout
+            android:id="@+id/rl_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/user_placeholder"/>
+
+            <LinearLayout
+                android:id="@+id/ll_details"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_toRightOf="@+id/img_profile"
+                android:layout_toLeftOf="@+id/txt_date"
+                android:layout_marginRight="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/txt_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Coffee, Brewed"
+                    android:textStyle="bold"
+                    android:textColor="@color/main_color"
+                    android:fontFamily="@font/rubik"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+
+                <TextView
+                    android:id="@+id/txt_list_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="2 cals per cup"
+                    android:textColor="@color/main_color"
+                    android:fontFamily="@font/rubik"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_profile"
+                tools:text="To Lose 50 pounds in 3 months."
+                android:textColor="@color/light_blue_text"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:drawableLeft="@drawable/slating_flag_selected"
+                android:drawablePadding="@dimen/_10sdp"
+                android:gravity="center"
+                android:fontFamily="@font/rubik"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/left_arrow"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"
+                android:layout_marginLeft="@dimen/_80sdp"
+                android:layout_below="@+id/txt_goal"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+        </RelativeLayout>
+
+    </com.daimajia.swipe.SwipeLayout>
+
+</android.support.v7.widget.CardView>

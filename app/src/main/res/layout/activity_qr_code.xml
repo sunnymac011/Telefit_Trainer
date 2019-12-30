@@ -17,6 +17,33 @@
             android:background="@drawable/tab_shadow_bg">
 
             <LinearLayout
+                android:id="@+id/ll_customers"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/tab_customers_icon"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customers"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/light_gray"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/rubik"/>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/ll_nutrition"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -35,6 +62,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nutrition"
+                    android:textSize="@dimen/_11sdp"
                     android:textColor="@color/main_color"
                     android:layout_marginTop="@dimen/_3sdp"
                     android:layout_gravity="center_horizontal"
@@ -61,6 +89,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fitness"
+                    android:textSize="@dimen/_11sdp"
                     android:textColor="@color/light_gray"
                     android:layout_marginTop="@dimen/_3sdp"
                     android:layout_gravity="center_horizontal"
@@ -87,32 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Goals"
-                    android:textColor="@color/light_gray"
-                    android:layout_marginTop="@dimen/_3sdp"
-                    android:layout_gravity="center_horizontal"
-                    android:fontFamily="@font/rubik"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ll_social"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="@dimen/_7sdp"
-                android:layout_marginBottom="@dimen/_7sdp">
-
-                <ImageView
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
-                    android:src="@drawable/tab_sosial_icon"
-                    android:layout_gravity="center_horizontal"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Social"
+                    android:textSize="@dimen/_11sdp"
                     android:textColor="@color/light_gray"
                     android:layout_marginTop="@dimen/_3sdp"
                     android:layout_gravity="center_horizontal"
@@ -139,6 +143,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Profile"
+                    android:textSize="@dimen/_11sdp"
                     android:textColor="@color/light_gray"
                     android:layout_marginTop="@dimen/_3sdp"
                     android:layout_gravity="center_horizontal"
@@ -219,7 +224,7 @@
                     android:textColor="@color/white"
                     android:textAlignment="center"
                     android:layout_weight="1"/>
-                
+
             </LinearLayout>
 
             <com.journeyapps.barcodescanner.CompoundBarcodeView
@@ -232,6 +237,19 @@
                 android:layout_marginLeft="@dimen/_30sdp"
                 android:layout_marginRight="@dimen/_30sdp"/>
 
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true">
+
+            <ProgressBar
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </RelativeLayout>
 
     </RelativeLayout>
