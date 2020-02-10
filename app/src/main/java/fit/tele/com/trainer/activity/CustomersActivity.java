@@ -16,10 +16,9 @@ import fit.tele.com.trainer.adapter.RequestAdapter;
 import fit.tele.com.trainer.apiBase.FetchServiceBase;
 import fit.tele.com.trainer.base.BaseActivity;
 import fit.tele.com.trainer.databinding.ActivityCustomersBinding;
-import fit.tele.com.trainer.modelBean.CountryBean;
 import fit.tele.com.trainer.modelBean.CustomerProfileBean;
-import fit.tele.com.trainer.modelBean.LoginBean;
 import fit.tele.com.trainer.modelBean.ModelBean;
+import fit.tele.com.trainer.modelBean.chat.UserModel;
 import fit.tele.com.trainer.utils.CommonUtils;
 import rx.Observable;
 import rx.Subscriber;
@@ -105,7 +104,21 @@ public class CustomersActivity extends BaseActivity implements View.OnClickListe
 
         customersAdapter = new CustomersAdapter(context, new CustomersAdapter.ClickListener() {
             @Override
-            public void onClickMsg(String cust_id) {
+            public void onClickMsg(CustomerProfileBean customerProfileBean) {
+                final UserModel model = new UserModel();
+                model.setUser_id(String.valueOf(preferences.getUserDataPref().getId()));
+                model.setName(customerProfileBean.getName()+" "+customerProfileBean.getlName());
+                model.setFriend_id(String.valueOf(customerProfileBean.getId()));
+                model.setPhoto_profile(customerProfileBean.getProfilePicUrl());
+                Intent in = new Intent(context,MessageActivity.class);
+                in.putExtra("user_model", model);
+                startActivity(in);
+
+                Log.w("setUser_id",""+String.valueOf(preferences.getUserDataPref().getId()));
+                Log.w("setName",""+customerProfileBean.getName()+" "+customerProfileBean.getlName());
+                Log.w("setFriend_id",""+String.valueOf(customerProfileBean.getId()));
+                Log.w("setPhoto_profile",""+customerProfileBean.getProfilePicUrl());
+
 
             }
 

@@ -15,10 +15,8 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 import fit.tele.com.trainer.R;
-import fit.tele.com.trainer.modelBean.CountryBean;
 import fit.tele.com.trainer.modelBean.CustomerProfileBean;
 import fit.tele.com.trainer.utils.CircleTransform;
-import fit.tele.com.trainer.utils.Preferences;
 
 public class CustomersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final int VIEW_TYPE_ITEM = 0;
@@ -97,7 +95,7 @@ public class CustomersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             img_msg.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    clickListener.onClickMsg(list.get(pos).getId());
+                    clickListener.onClickMsg(list.get(pos));
                 }
             });
 
@@ -146,7 +144,7 @@ public class CustomersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     public interface ClickListener {
-        void onClickMsg(String cust_id);
+        void onClickMsg(CustomerProfileBean customer_profile);
         void onClickVideo(String cust_id);
         void onClick(String cust_id);
     }
